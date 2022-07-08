@@ -58,7 +58,10 @@ class MyApp extends StatelessWidget {
                   height: 50,
                   width: width,
                   color: ColorTheme.lightGray,
-                  child: Text("Search"),
+                  child: Text(
+                    "Search",
+                    style: TextStyle(fontSize: 14),
+                  ),
                 ),
               ),
             ],
