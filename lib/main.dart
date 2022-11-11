@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/ScreenComponent/list_movie.dart';
 import 'package:my_app/global_theme/color_theme.dart';
 import 'ScreenComponent/belajar.dart';
 
@@ -7,7 +8,7 @@ void main() {
     // ignore: prefer_const_constructors
     MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Belajar(),
+      home: ListMovie(),
     ),
   );
 }

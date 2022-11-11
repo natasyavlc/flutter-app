@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/global_theme/color_theme.dart';
 import 'package:my_app/global_theme/text_theme.dart';
+import 'package:my_app/main.dart';
 
 class Belajar extends StatelessWidget {
   const Belajar({Key? key}) : super(key: key);
@@ -47,7 +48,15 @@ class Belajar extends StatelessWidget {
                 borderRadius: BorderRadius.circular(20),
                 image: DecorationImage(
                     fit: BoxFit.cover,
-                    image: AssetImage('assets/images/poster_film.jpeg'))),
+                    image: AssetImage('assets/images/poster_film.jpeg')),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.2),
+                    spreadRadius: 3,
+                    blurRadius: 8,
+                    offset: Offset(0, 3), // changes position of shadow
+                  ),
+                ]),
           ),
           Container(
             margin: EdgeInsets.only(top: 16),
@@ -154,9 +163,14 @@ class Belajar extends StatelessWidget {
           Container(
             width: double.infinity,
             height: 46,
-            margin: EdgeInsets.only(top: 24, bottom: 30),
+            margin: EdgeInsets.only(top: 24, bottom: 0),
             child: TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const MyApp()),
+                );
+              },
               style: TextButton.styleFrom(
                   backgroundColor: ColorTheme.darkRed,
                   shape: RoundedRectangleBorder(
